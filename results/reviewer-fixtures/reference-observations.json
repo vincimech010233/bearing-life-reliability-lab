@@ -1,0 +1,15 @@
+{
+  "classification": "OBSERVED",
+  "nominal_hours": 1388.888888888889,
+  "independent_analytic_quantiles_hours": [
+    728.1210204563715,
+    1404.784911216748,
+    2710.2920961481736
+  ],
+  "stored_quantiles_match": true,
+  "observed_mc_relative_errors": [
+    0.0023258945862251455,
+    -0.005021443935507155,
+    -0.0030546396134839946
+  ]
+}

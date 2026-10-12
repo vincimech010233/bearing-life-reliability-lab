@@ -1,0 +1,7 @@
+{
+  "classification": "OBSERVED",
+  "case": "positive_underflow",
+  "nominal_hours": 0.0,
+  "quantile_errors_finite": false,
+  "warning_count": 1
+}

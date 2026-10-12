@@ -1,0 +1,7 @@
+{
+  "classification": "OBSERVED",
+  "underflow_rejected": true,
+  "error": "nominal life: numerical underflow/overflow or nonpositive result",
+  "cli_exit_status": 2,
+  "cli_output_directory_created": false
+}

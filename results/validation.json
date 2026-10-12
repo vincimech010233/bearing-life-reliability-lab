@@ -1,0 +1,252 @@
+[
+  {
+    "timestamp": "2026-10-12T10:57:06.169975+00:00",
+    "checks": [
+      {
+        "command": "python3 -m venv .venv",
+        "exit_status": 0,
+        "seconds": 4.355,
+        "classification": "OBSERVED",
+        "output": "OBSERVED peak_RSS_KiB=75808 elapsed_seconds=4.35\n"
+      },
+      {
+        "command": ".venv/bin/pip install --cache-dir .cache -r requirements.txt",
+        "exit_status": 0,
+        "seconds": 25.002,
+        "classification": "OBSERVED",
+        "output": "Collecting numpy==2.5.4 (from -r requirements.txt (line 1))\n  Downloading numpy-2.5.4-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (6.6 kB)\nCollecting matplotlib==3.11.2 (from -r requirements.txt (line 2))\n  Downloading matplotlib-3.11.2-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (80 kB)\n     \u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501 80.3/80.3 kB 307.1 kB/s eta 0:00:00\nCollecting contourpy>=1.0.1 (from matplotlib==3.11.2->-r requirements.txt (line 2))\n  Downloading contourpy-1.4.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (3.8 kB)\nCollecting cycler>=0.10 (from matplotlib==3.11.2->-r requirements.txt (line 2))\n  Downloading cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)\nCollecting fonttools>=4.28.2 (from matplotlib==3.11.2->-r requirements.txt (line 2))\n  Downloading fonttools-4.66.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (130 kB)\n     \u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501 130.1/130.1 kB 885.5 kB/s eta 0:00:00\nCollecting kiwisolver>=1.3.1 (from matplotlib==3.11.2->-r requirements.txt (line 2))\n  Downloading kiwisolver-1.5.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (5.2 kB)\nCollecting packaging>=20.0 (from matplotlib==3.11.2->-r requirements.txt (line 2))\n  Downloading packaging-26.3-py3-none-any.whl.metadata (3.5 kB)\nCollecting pillow>=9 (from matplotlib==3.11.2->-r requirements.txt (line 2))\n  Downloading pillow-12.3.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (9.1 kB)\nCollecting pyparsing>=3 (from matplotlib==3.11.2->-r requirements.txt (line 2))\n  Downloading pyparsing-3.3.3-py3-none-any.whl.metadata (5.9 kB)\nCollecting python-dateutil>=2.7 (from matplotlib==3.11.2->-r requirements.txt (line 2))\n  Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)\nCollecting six>=1.5 (from python-dateutil>=2.7->matplotlib==3.11.2->-r requirements.txt (line 2))\n  Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)\nDownloading numpy-2.5.4-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.7 MB)\n   \u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501 16.7/16.7 MB 8.3 MB/s eta 0:00:00\nDownloading matplotlib-3.11.2-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (9.9 MB)\n   \u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501 9.9/9.9 MB 5.3 MB/s eta 0:00:00\nDownloading contourpy-1.4.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (383 kB)\n   \u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501 383.2/383.2 kB 2.4 MB/s eta 0:00:00\nDownloading cycler-0.12.1-py3-none-any.whl (8.3 kB)\nDownloading fonttools-4.66.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (5.4 MB)\n   \u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501 5.4/5.4 MB 9.9 MB/s eta 0:00:00\nDownloading kiwisolver-1.5.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (1.5 MB)\n   \u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501 1.5/1.5 MB 8.5 MB/s eta 0:00:00\nDownloading packaging-26.3-py3-none-any.whl (129 kB)\n   \u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501 130.0/130.0 kB 793.8 kB/s eta 0:00:00\nDownloading pillow-12.3.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (6.9 MB)\n   \u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501 6.9/6.9 MB 13.4 MB/s eta 0:00:00\nDownloading pyparsing-3.3.3-py3-none-any.whl (126 kB)\n   \u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501 126.4/126.4 kB 827.7 kB/s eta 0:00:00\nDownloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)\n   \u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501 229.9/229.9 kB 1.5 MB/s eta 0:00:00\nDownloading six-1.17.0-py2.py3-none-any.whl (11 kB)\nInstalling collected packages: six, pyparsing, pillow, packaging, numpy, kiwisolver, fonttools, cycler, python-dateutil, contourpy, matplotlib\nSuccessfully installed contourpy-1.4.0 cycler-0.12.1 fonttools-4.66.1 kiwisolver-1.5.1 matplotlib-3.11.2 numpy-2.5.4 packaging-26.3 pillow-12.3.0 pyparsing-3.3.3 python-dateutil-2.9.0.post0 six-1.17.0\nOBSERVED peak_RSS_KiB=126784 elapsed_seconds=25.00\n"
+      },
+      {
+        "command": ".venv/bin/pip freeze > requirements.lock",
+        "exit_status": 0,
+        "seconds": 0.553,
+        "classification": "OBSERVED",
+        "output": "OBSERVED peak_RSS_KiB=45944 elapsed_seconds=0.54\n"
+      },
+      {
+        "command": ".venv/bin/pip check",
+        "exit_status": 0,
+        "seconds": 0.54,
+        "classification": "OBSERVED",
+        "output": "No broken requirements found.\nOBSERVED peak_RSS_KiB=46452 elapsed_seconds=0.53\n"
+      },
+      {
+        "command": ".venv/bin/python -m unittest discover -s tests -v",
+        "exit_status": 0,
+        "seconds": 0.197,
+        "classification": "OBSERVED",
+        "output": "test_dimension_invariance (test_bearing.BearingTests.test_dimension_invariance) ... ok\ntest_reference (test_bearing.BearingTests.test_reference) ... ok\ntest_rejection (test_bearing.BearingTests.test_rejection) ... ok\ntest_roller_reference (test_bearing.BearingTests.test_roller_reference) ... ok\ntest_scaling (test_bearing.BearingTests.test_scaling) ... ok\ntest_seeded_and_exact_uncertainty (test_bearing.BearingTests.test_seeded_and_exact_uncertainty) ... ok\ntest_sensitivity_derivatives (test_bearing.BearingTests.test_sensitivity_derivatives) ... ok\ntest_units_ratio_and_unknown_fields (test_bearing.BearingTests.test_units_ratio_and_unknown_fields) ... ok\ntest_zero_uncertainty (test_bearing.BearingTests.test_zero_uncertainty) ... ok\n\n----------------------------------------------------------------------\nRan 9 tests in 0.030s\n\nOK\nOBSERVED peak_RSS_KiB=39660 elapsed_seconds=0.19\n"
+      },
+      {
+        "command": ".venv/bin/python src/bearing.py examples/bearing.json results",
+        "exit_status": 0,
+        "seconds": 1.165,
+        "classification": "OBSERVED",
+        "output": "OBSERVED peak_RSS_KiB=79992 elapsed_seconds=1.16\n"
+      },
+      {
+        "command": ".venv/bin/python -m compileall -q src tests",
+        "exit_status": 0,
+        "seconds": 0.057,
+        "classification": "OBSERVED",
+        "output": "OBSERVED peak_RSS_KiB=13408 elapsed_seconds=0.05\n"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-12T10:57:28.769164+00:00",
+    "checks": [
+      {
+        "command": "../portfolio-delivery-20261012/.venv/bin/ruff check src tests --select E4,E7,E9,F --output-format concise",
+        "exit_status": 1,
+        "seconds": 0.013,
+        "classification": "OBSERVED",
+        "output": "src/bearing.py:3:1: E401 [*] Multiple imports on one line\nsrc/bearing.py:9:122: E701 Multiple statements on one line (colon)\nsrc/bearing.py:12:75: E701 Multiple statements on one line (colon)\nsrc/bearing.py:13:110: E701 Multiple statements on one line (colon)\nsrc/bearing.py:15:68: E702 Multiple statements on one line (semicolon)\nsrc/bearing.py:17:13: E701 Multiple statements on one line (colon)\nsrc/bearing.py:19:76: E701 Multiple statements on one line (colon)\nsrc/bearing.py:21:121: E701 Multiple statements on one line (colon)\nsrc/bearing.py:25:55: E701 Multiple statements on one line (colon)\nsrc/bearing.py:26:25: E701 Multiple statements on one line (colon)\nsrc/bearing.py:27:26: E702 Multiple statements on one line (semicolon)\nsrc/bearing.py:28:29: E701 Multiple statements on one line (colon)\nsrc/bearing.py:32:25: E702 Multiple statements on one line (semicolon)\nsrc/bearing.py:32:58: E702 Multiple statements on one line (semicolon)\nsrc/bearing.py:33:45: E702 Multiple statements on one line (semicolon)\nsrc/bearing.py:38:26: E702 Multiple statements on one line (semicolon)\nsrc/bearing.py:38:52: E702 Multiple statements on one line (semicolon)\nsrc/bearing.py:38:89: E702 Multiple statements on one line (semicolon)\nsrc/bearing.py:38:122: E702 Multiple statements on one line (semicolon)\nsrc/bearing.py:39:60: E702 Multiple statements on one line (semicolon)\nsrc/bearing.py:39:109: E702 Multiple statements on one line (semicolon)\nsrc/bearing.py:39:151: E702 Multiple statements on one line (semicolon)\nsrc/bearing.py:39:200: E702 Multiple statements on one line (semicolon)\nsrc/bearing.py:39:233: E702 Multiple statements on one line (semicolon)\nsrc/bearing.py:44:19: E702 Multiple statements on one line (semicolon)\nsrc/bearing.py:46:64: E702 Multiple statements on one line (semicolon)\nsrc/bearing.py:46:143: E702 Multiple statements on one line (semicolon)\nsrc/bearing.py:46:249: E702 Multiple statements on one line (semicolon)\nsrc/bearing.py:46:273: E702 Multiple statements on one line (semicolon)\nsrc/bearing.py:46:332: E702 Multiple statements on one line (semicolon)\nsrc/bearing.py:46:406: E702 Multiple statements on one line (semicolon)\nsrc/bearing.py:46:534: E702 Multiple statements on one line (semicolon)\nsrc/bearing.py:46:551: E702 Multiple statements on one line (semicolon)\nsrc/bearing.py:46:576: E702 Multiple statements on one line (semicolon)\nsrc/bearing.py:49:34: E702 Multiple statements on one line (semicolon)\nsrc/bearing.py:49:63: E702 Multiple statements on one line (semicolon)\nsrc/bearing.py:49:97: E702 Multiple statements on one line (semicolon)\nsrc/bearing.py:52:28: E701 Multiple statements on one line (colon)\nsrc/bearing.py:53:41: E702 Multiple statements on one line (semicolon)\nsrc/bearing.py:53:64: E702 Multiple statements on one line (semicolon)\nsrc/bearing.py:53:102: E702 Multiple statements on one line (semicolon)\nsrc/bearing.py:53:130: E702 Multiple statements on one line (semicolon)\nsrc/bearing.py:53:206: E702 Multiple statements on one line (semicolon)\nsrc/bearing.py:54:67: E701 Multiple statements on one line (colon)\nsrc/bearing.py:54:92: E702 Multiple statements on one line (semicolon)\nsrc/bearing.py:56:24: E701 Multiple statements on one line (colon)\ntests/test_bearing.py:2:1: E401 [*] Multiple imports on one line\ntests/test_bearing.py:2:8: F401 [*] `copy` imported but unused\ntests/test_bearing.py:6:43: F401 [*] `bearing.analytic_lognormal` imported but unused\ntests/test_bearing.py:10:30: E702 Multiple statements on one line (semicolon)\ntests/test_bearing.py:10:87: E702 Multiple statements on one line (semicolon)\ntests/test_bearing.py:12:19: E702 Multiple statements on one line (semicolon)\ntests/test_bearing.py:12:34: E702 Multiple statements on one line (semicolon)\ntests/test_bearing.py:12:99: E702 Multiple statements on one line (semicolon)\ntests/test_bearing.py:12:114: E702 Multiple statements on one line (semicolon)\ntests/test_bearing.py:15:35: E702 Multiple statements on one line (semicolon)\ntests/test_bearing.py:15:96: E702 Multiple statements on one line (semicolon)\ntests/test_bearing.py:15:160: E702 Multiple statements on one line (semicolon)\ntests/test_bearing.py:17:37: E702 Multiple statements on one line (semicolon)\ntests/test_bearing.py:17:44: E702 Multiple statements on one line (semicolon)\ntests/test_bearing.py:19:16: E702 Multiple statements on one line (semicolon)\ntests/test_bearing.py:19:37: E702 Multiple statements on one line (semicolon)\ntests/test_bearing.py:19:73: E702 Multiple statements on one line (semicolon)\ntests/test_bearing.py:22:20: E702 Multiple statements on one line (semicolon)\ntests/test_bearing.py:23:38: E701 Multiple statements on one line (colon)\ntests/test_bearing.py:25:19: E702 Multiple statements on one line (semicolon)\ntests/test_bearing.py:25:46: E702 Multiple statements on one line (semicolon)\ntests/test_bearing.py:25:61: E702 Multiple statements on one line (semicolon)\ntests/test_bearing.py:27:30: E702 Multiple statements on one line (semicolon)\ntests/test_bearing.py:27:58: E702 Multiple statements on one line (semicolon)\ntests/test_bearing.py:27:95: E702 Multiple statements on one line (semicolon)\ntests/test_bearing.py:29:19: E702 Multiple statements on one line (semicolon)\ntests/test_bearing.py:29:62: E702 Multiple statements on one line (semicolon)\ntests/test_bearing.py:29:77: E702 Multiple statements on one line (semicolon)\ntests/test_bearing.py:29:131: E702 Multiple statements on one line (semicolon)\ntests/test_bearing.py:31:19: E702 Multiple statements on one line (semicolon)\ntests/test_bearing.py:32:37: E701 Multiple statements on one line (colon)\ntests/test_bearing.py:33:24: E701 Multiple statements on one line (colon)\nFound 78 errors.\n[*] 4 fixable with `--fix`.\nCommand exited with non-zero status 1\nOBSERVED peak_RSS_KiB=21412 elapsed_seconds=0.01\n"
+      },
+      {
+        "command": "../portfolio-delivery-20261012/.venv/bin/ruff check src tests --select E4,E7,E9,F --fix --output-format concise",
+        "exit_status": 1,
+        "seconds": 0.013,
+        "classification": "OBSERVED",
+        "output": "src/bearing.py:13:122: E701 Multiple statements on one line (colon)\nsrc/bearing.py:16:75: E701 Multiple statements on one line (colon)\nsrc/bearing.py:17:110: E701 Multiple statements on one line (colon)\nsrc/bearing.py:19:68: E702 Multiple statements on one line (semicolon)\nsrc/bearing.py:21:13: E701 Multiple statements on one line (colon)\nsrc/bearing.py:23:76: E701 Multiple statements on one line (colon)\nsrc/bearing.py:25:121: E701 Multiple statements on one line (colon)\nsrc/bearing.py:29:55: E701 Multiple statements on one line (colon)\nsrc/bearing.py:30:25: E701 Multiple statements on one line (colon)\nsrc/bearing.py:31:26: E702 Multiple statements on one line (semicolon)\nsrc/bearing.py:32:29: E701 Multiple statements on one line (colon)\nsrc/bearing.py:36:25: E702 Multiple statements on one line (semicolon)\nsrc/bearing.py:36:58: E702 Multiple statements on one line (semicolon)\nsrc/bearing.py:37:45: E702 Multiple statements on one line (semicolon)\nsrc/bearing.py:42:26: E702 Multiple statements on one line (semicolon)\nsrc/bearing.py:42:52: E702 Multiple statements on one line (semicolon)\nsrc/bearing.py:42:89: E702 Multiple statements on one line (semicolon)\nsrc/bearing.py:42:122: E702 Multiple statements on one line (semicolon)\nsrc/bearing.py:43:60: E702 Multiple statements on one line (semicolon)\nsrc/bearing.py:43:109: E702 Multiple statements on one line (semicolon)\nsrc/bearing.py:43:151: E702 Multiple statements on one line (semicolon)\nsrc/bearing.py:43:200: E702 Multiple statements on one line (semicolon)\nsrc/bearing.py:43:233: E702 Multiple statements on one line (semicolon)\nsrc/bearing.py:48:19: E702 Multiple statements on one line (semicolon)\nsrc/bearing.py:50:64: E702 Multiple statements on one line (semicolon)\nsrc/bearing.py:50:143: E702 Multiple statements on one line (semicolon)\nsrc/bearing.py:50:249: E702 Multiple statements on one line (semicolon)\nsrc/bearing.py:50:273: E702 Multiple statements on one line (semicolon)\nsrc/bearing.py:50:332: E702 Multiple statements on one line (semicolon)\nsrc/bearing.py:50:406: E702 Multiple statements on one line (semicolon)\nsrc/bearing.py:50:534: E702 Multiple statements on one line (semicolon)\nsrc/bearing.py:50:551: E702 Multiple statements on one line (semicolon)\nsrc/bearing.py:50:576: E702 Multiple statements on one line (semicolon)\nsrc/bearing.py:53:34: E702 Multiple statements on one line (semicolon)\nsrc/bearing.py:53:63: E702 Multiple statements on one line (semicolon)\nsrc/bearing.py:53:97: E702 Multiple statements on one line (semicolon)\nsrc/bearing.py:56:28: E701 Multiple statements on one line (colon)\nsrc/bearing.py:57:41: E702 Multiple statements on one line (semicolon)\nsrc/bearing.py:57:64: E702 Multiple statements on one line (semicolon)\nsrc/bearing.py:57:102: E702 Multiple statements on one line (semicolon)\nsrc/bearing.py:57:130: E702 Multiple statements on one line (semicolon)\nsrc/bearing.py:57:206: E702 Multiple statements on one line (semicolon)\nsrc/bearing.py:58:67: E701 Multiple statements on one line (colon)\nsrc/bearing.py:58:92: E702 Multiple statements on one line (semicolon)\nsrc/bearing.py:60:24: E701 Multiple statements on one line (colon)\ntests/test_bearing.py:13:30: E702 Multiple statements on one line (semicolon)\ntests/test_bearing.py:13:87: E702 Multiple statements on one line (semicolon)\ntests/test_bearing.py:15:19: E702 Multiple statements on one line (semicolon)\ntests/test_bearing.py:15:34: E702 Multiple statements on one line (semicolon)\ntests/test_bearing.py:15:99: E702 Multiple statements on one line (semicolon)\ntests/test_bearing.py:15:114: E702 Multiple statements on one line (semicolon)\ntests/test_bearing.py:18:35: E702 Multiple statements on one line (semicolon)\ntests/test_bearing.py:18:96: E702 Multiple statements on one line (semicolon)\ntests/test_bearing.py:18:160: E702 Multiple statements on one line (semicolon)\ntests/test_bearing.py:20:37: E702 Multiple statements on one line (semicolon)\ntests/test_bearing.py:20:44: E702 Multiple statements on one line (semicolon)\ntests/test_bearing.py:22:16: E702 Multiple statements on one line (semicolon)\ntests/test_bearing.py:22:37: E702 Multiple statements on one line (semicolon)\ntests/test_bearing.py:22:73: E702 Multiple statements on one line (semicolon)\ntests/test_bearing.py:25:20: E702 Multiple statements on one line (semicolon)\ntests/test_bearing.py:26:38: E701 Multiple statements on one line (colon)\ntests/test_bearing.py:28:19: E702 Multiple statements on one line (semicolon)\ntests/test_bearing.py:28:46: E702 Multiple statements on one line (semicolon)\ntests/test_bearing.py:28:61: E702 Multiple statements on one line (semicolon)\ntests/test_bearing.py:30:30: E702 Multiple statements on one line (semicolon)\ntests/test_bearing.py:30:58: E702 Multiple statements on one line (semicolon)\ntests/test_bearing.py:30:95: E702 Multiple statements on one line (semicolon)\ntests/test_bearing.py:32:19: E702 Multiple statements on one line (semicolon)\ntests/test_bearing.py:32:62: E702 Multiple statements on one line (semicolon)\ntests/test_bearing.py:32:77: E702 Multiple statements on one line (semicolon)\ntests/test_bearing.py:32:131: E702 Multiple statements on one line (semicolon)\ntests/test_bearing.py:34:19: E702 Multiple statements on one line (semicolon)\ntests/test_bearing.py:35:37: E701 Multiple statements on one line (colon)\ntests/test_bearing.py:36:24: E701 Multiple statements on one line (colon)\nFound 78 errors (4 fixed, 74 remaining).\nCommand exited with non-zero status 1\nOBSERVED peak_RSS_KiB=20748 elapsed_seconds=0.01\n"
+      },
+      {
+        "command": "../portfolio-delivery-20261012/.venv/bin/ruff format src tests",
+        "exit_status": 0,
+        "seconds": 0.012,
+        "classification": "OBSERVED",
+        "output": "2 files reformatted\nOBSERVED peak_RSS_KiB=17436 elapsed_seconds=0.01\n"
+      },
+      {
+        "command": "../portfolio-delivery-20261012/.venv/bin/ruff check src tests --select E4,E7,E9,F",
+        "exit_status": 0,
+        "seconds": 0.013,
+        "classification": "OBSERVED",
+        "output": "All checks passed!\nOBSERVED peak_RSS_KiB=18860 elapsed_seconds=0.01\n"
+      },
+      {
+        "command": "../portfolio-delivery-20261012/.venv/bin/ruff format --check src tests",
+        "exit_status": 0,
+        "seconds": 0.01,
+        "classification": "OBSERVED",
+        "output": "2 files already formatted\nOBSERVED peak_RSS_KiB=16136 elapsed_seconds=0.00\n"
+      },
+      {
+        "command": ".venv/bin/python -m unittest discover -s tests -v",
+        "exit_status": 0,
+        "seconds": 0.204,
+        "classification": "OBSERVED",
+        "output": "test_dimension_invariance (test_bearing.BearingTests.test_dimension_invariance) ... ok\ntest_reference (test_bearing.BearingTests.test_reference) ... ok\ntest_rejection (test_bearing.BearingTests.test_rejection) ... ok\ntest_roller_reference (test_bearing.BearingTests.test_roller_reference) ... ok\ntest_scaling (test_bearing.BearingTests.test_scaling) ... ok\ntest_seeded_and_exact_uncertainty (test_bearing.BearingTests.test_seeded_and_exact_uncertainty) ... ok\ntest_sensitivity_derivatives (test_bearing.BearingTests.test_sensitivity_derivatives) ... ok\ntest_units_ratio_and_unknown_fields (test_bearing.BearingTests.test_units_ratio_and_unknown_fields) ... ok\ntest_zero_uncertainty (test_bearing.BearingTests.test_zero_uncertainty) ... ok\n\n----------------------------------------------------------------------\nRan 9 tests in 0.028s\n\nOK\nOBSERVED peak_RSS_KiB=39644 elapsed_seconds=0.20\n"
+      },
+      {
+        "command": ".venv/bin/python src/bearing.py examples/bearing.json results",
+        "exit_status": 0,
+        "seconds": 1.195,
+        "classification": "OBSERVED",
+        "output": "OBSERVED peak_RSS_KiB=79644 elapsed_seconds=1.19\n"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-12T10:57:57.898398+00:00",
+    "checks": [
+      {
+        "command": ".venv/bin/python ../portfolio-delivery-20261012/python-metadata.py",
+        "exit_status": 0,
+        "seconds": 0.148,
+        "classification": "OBSERVED",
+        "output": "OBSERVED license metadata 11 distributions; exhaustive bundled license review NOT_VERIFIED\nOBSERVED peak_RSS_KiB=18264 elapsed_seconds=0.14\n"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-12T11:00:24.501568+00:00",
+    "checks": [
+      {
+        "command": "../portfolio-delivery-20261012/.venv/bin/ruff format src tests",
+        "exit_status": 0,
+        "seconds": 0.012,
+        "classification": "OBSERVED",
+        "output": "1 file reformatted, 1 file left unchanged\nOBSERVED peak_RSS_KiB=17800 elapsed_seconds=0.01\n"
+      },
+      {
+        "command": "../portfolio-delivery-20261012/.venv/bin/ruff check src tests --select E4,E7,E9,F",
+        "exit_status": 0,
+        "seconds": 0.012,
+        "classification": "OBSERVED",
+        "output": "All checks passed!\nOBSERVED peak_RSS_KiB=18868 elapsed_seconds=0.01\n"
+      },
+      {
+        "command": ".venv/bin/python -m unittest discover -s tests -v",
+        "exit_status": 1,
+        "seconds": 0.189,
+        "classification": "OBSERVED",
+        "output": "test_dimension_invariance (test_bearing.BearingTests.test_dimension_invariance) ... ok\ntest_numerical_limits (test_bearing.BearingTests.test_numerical_limits) ... FAIL\ntest_reference (test_bearing.BearingTests.test_reference) ... ok\ntest_rejection (test_bearing.BearingTests.test_rejection) ... ok\ntest_roller_reference (test_bearing.BearingTests.test_roller_reference) ... ok\ntest_scaling (test_bearing.BearingTests.test_scaling) ... ok\ntest_seeded_and_exact_uncertainty (test_bearing.BearingTests.test_seeded_and_exact_uncertainty) ... ok\ntest_sensitivity_derivatives (test_bearing.BearingTests.test_sensitivity_derivatives) ... ok\ntest_units_ratio_and_unknown_fields (test_bearing.BearingTests.test_units_ratio_and_unknown_fields) ... ok\ntest_zero_uncertainty (test_bearing.BearingTests.test_zero_uncertainty) ... ok\n\n======================================================================\nFAIL: test_numerical_limits (test_bearing.BearingTests.test_numerical_limits)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"[workspace]/projects/bearing-life-reliability-lab/tests/test_bearing.py\", line 20, in test_numerical_limits\n    with self.assertRaises(ValueError):\nAssertionError: ValueError not raised\n\n----------------------------------------------------------------------\nRan 10 tests in 0.029s\n\nFAILED (failures=1)\nCommand exited with non-zero status 1\nOBSERVED peak_RSS_KiB=39604 elapsed_seconds=0.18\n"
+      },
+      {
+        "command": ".venv/bin/python src/bearing.py examples/bearing.json results",
+        "exit_status": 0,
+        "seconds": 0.966,
+        "classification": "OBSERVED",
+        "output": "OBSERVED peak_RSS_KiB=79744 elapsed_seconds=0.96\n"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-12T11:00:59.193004+00:00",
+    "checks": [
+      {
+        "command": "../portfolio-delivery-20261012/.venv/bin/ruff format src tests",
+        "exit_status": 0,
+        "seconds": 0.012,
+        "classification": "OBSERVED",
+        "output": "2 files left unchanged\nOBSERVED peak_RSS_KiB=17576 elapsed_seconds=0.01\n"
+      },
+      {
+        "command": "../portfolio-delivery-20261012/.venv/bin/ruff check src tests --select E4,E7,E9,F",
+        "exit_status": 0,
+        "seconds": 0.011,
+        "classification": "OBSERVED",
+        "output": "All checks passed!\nOBSERVED peak_RSS_KiB=19120 elapsed_seconds=0.00\n"
+      },
+      {
+        "command": ".venv/bin/python -m unittest discover -s tests -v",
+        "exit_status": 0,
+        "seconds": 0.174,
+        "classification": "OBSERVED",
+        "output": "test_dimension_invariance (test_bearing.BearingTests.test_dimension_invariance) ... ok\ntest_numerical_limits (test_bearing.BearingTests.test_numerical_limits) ... ok\ntest_reference (test_bearing.BearingTests.test_reference) ... ok\ntest_rejection (test_bearing.BearingTests.test_rejection) ... ok\ntest_roller_reference (test_bearing.BearingTests.test_roller_reference) ... ok\ntest_scaling (test_bearing.BearingTests.test_scaling) ... ok\ntest_seeded_and_exact_uncertainty (test_bearing.BearingTests.test_seeded_and_exact_uncertainty) ... ok\ntest_sensitivity_derivatives (test_bearing.BearingTests.test_sensitivity_derivatives) ... ok\ntest_units_ratio_and_unknown_fields (test_bearing.BearingTests.test_units_ratio_and_unknown_fields) ... ok\ntest_zero_uncertainty (test_bearing.BearingTests.test_zero_uncertainty) ... ok\n\n----------------------------------------------------------------------\nRan 10 tests in 0.028s\n\nOK\nOBSERVED peak_RSS_KiB=39680 elapsed_seconds=0.17\n"
+      },
+      {
+        "command": ".venv/bin/python src/bearing.py examples/bearing.json results",
+        "exit_status": 0,
+        "seconds": 0.972,
+        "classification": "OBSERVED",
+        "output": "OBSERVED peak_RSS_KiB=80152 elapsed_seconds=0.97\n"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-12T11:14:52.030957+00:00",
+    "checks": [
+      {
+        "command": "../portfolio-delivery-20261012/.venv/bin/ruff check src tests tools --select E4,F --fix --output-format concise",
+        "exit_status": 0,
+        "seconds": 0.013,
+        "classification": "OBSERVED",
+        "output": "Found 1 error (1 fixed, 0 remaining).\nOBSERVED peak_RSS_KiB=19480 elapsed_seconds=0.01\n"
+      },
+      {
+        "command": "../portfolio-delivery-20261012/.venv/bin/ruff format src tests tools",
+        "exit_status": 0,
+        "seconds": 0.015,
+        "classification": "OBSERVED",
+        "output": "1 file reformatted, 2 files left unchanged\nOBSERVED peak_RSS_KiB=17168 elapsed_seconds=0.01\n"
+      },
+      {
+        "command": "../portfolio-delivery-20261012/.venv/bin/ruff check src tests tools --select E4,E7,E9,F",
+        "exit_status": 0,
+        "seconds": 0.015,
+        "classification": "OBSERVED",
+        "output": "All checks passed!\nOBSERVED peak_RSS_KiB=18444 elapsed_seconds=0.01\n"
+      },
+      {
+        "command": "../portfolio-delivery-20261012/.venv/bin/ruff format --check src tests tools",
+        "exit_status": 0,
+        "seconds": 0.012,
+        "classification": "OBSERVED",
+        "output": "3 files already formatted\nOBSERVED peak_RSS_KiB=16152 elapsed_seconds=0.00\n"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-12T11:14:52.935953+00:00",
+    "checks": [
+      {
+        "command": ".venv/bin/python -m unittest discover -s tests -v",
+        "exit_status": 0,
+        "seconds": 0.265,
+        "classification": "OBSERVED",
+        "output": "test_dimension_invariance (test_bearing.BearingTests.test_dimension_invariance) ... ok\ntest_numerical_limits (test_bearing.BearingTests.test_numerical_limits) ... ok\ntest_reference (test_bearing.BearingTests.test_reference) ... ok\ntest_rejection (test_bearing.BearingTests.test_rejection) ... ok\ntest_roller_reference (test_bearing.BearingTests.test_roller_reference) ... ok\ntest_scaling (test_bearing.BearingTests.test_scaling) ... ok\ntest_seeded_and_exact_uncertainty (test_bearing.BearingTests.test_seeded_and_exact_uncertainty) ... ok\ntest_sensitivity_derivatives (test_bearing.BearingTests.test_sensitivity_derivatives) ... ok\ntest_units_ratio_and_unknown_fields (test_bearing.BearingTests.test_units_ratio_and_unknown_fields) ... ok\ntest_zero_uncertainty (test_bearing.BearingTests.test_zero_uncertainty) ... ok\n\n----------------------------------------------------------------------\nRan 10 tests in 0.038s\n\nOK\nOBSERVED peak_RSS_KiB=39600 elapsed_seconds=0.26\n"
+      },
+      {
+        "command": ".venv/bin/pip check",
+        "exit_status": 0,
+        "seconds": 0.638,
+        "classification": "OBSERVED",
+        "output": "No broken requirements found.\nOBSERVED peak_RSS_KiB=46448 elapsed_seconds=0.63\n"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-12T11:14:53.795391+00:00",
+    "checks": [
+      {
+        "command": "python3 tools/dependency_audit.py .",
+        "exit_status": 0,
+        "seconds": 0.858,
+        "classification": "OBSERVED",
+        "output": "OBSERVED 12 queries 0 advisories\nOBSERVED peak_RSS_KiB=22880 elapsed_seconds=0.85\n"
+      }
+    ]
+  }
+]

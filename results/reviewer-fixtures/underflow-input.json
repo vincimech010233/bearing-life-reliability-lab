@@ -1,0 +1,17 @@
+{
+  "synthetic": true,
+  "bearing_type": "ball",
+  "dynamic_rating": 1e-300,
+  "radial_load": 2.0,
+  "axial_load": 0.0,
+  "force_unit": "kN",
+  "speed": 1500.0,
+  "speed_unit": "rpm",
+  "cv": {
+    "rating": 0.05,
+    "load": 0.1,
+    "speed": 0.02
+  },
+  "samples": 5000,
+  "seed": 2026
+}

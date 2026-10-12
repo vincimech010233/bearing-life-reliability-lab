@@ -1,0 +1,10 @@
+{
+  "project": "bearing-life-reliability-lab",
+  "status": "VALIDATED_LOCAL",
+  "classification": "VERIFIED",
+  "limitation": "Basic hypothetical pure-radial L10; parameter uncertainty differs from fatigue reliability; no certification.",
+  "review": "docs/REVIEW.md",
+  "tests": "results/validation.json",
+  "publication_ready_for_manual_review": true,
+  "remote_ci": "NOT_VERIFIED"
+}
