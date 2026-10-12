@@ -1,0 +1,30 @@
+[
+  {
+    "command": ".venv/bin/python -m unittest discover -s tests -v",
+    "exit_status": 0,
+    "elapsed_seconds": 0.158,
+    "classification": "OBSERVED",
+    "output": "test_dimension_invariance (test_bearing.BearingTests.test_dimension_invariance) ... ok\ntest_numerical_limits (test_bearing.BearingTests.test_numerical_limits) ... ok\ntest_reference (test_bearing.BearingTests.test_reference) ... ok\ntest_rejection (test_bearing.BearingTests.test_rejection) ... ok\ntest_roller_reference (test_bearing.BearingTests.test_roller_reference) ... ok\ntest_scaling (test_bearing.BearingTests.test_scaling) ... ok\ntest_seeded_and_exact_uncertainty (test_bearing.BearingTests.test_seeded_and_exact_uncertainty) ... ok\ntest_sensitivity_derivatives (test_bearing.BearingTests.test_sensitivity_derivatives) ... ok\ntest_units_ratio_and_unknown_fields (test_bearing.BearingTests.test_units_ratio_and_unknown_fields) ... ok\ntest_zero_uncertainty (test_bearing.BearingTests.test_zero_uncertainty) ... ok\n\n----------------------------------------------------------------------\nRan 10 tests in 0.029s\n\nOK\nREVIEW_OBSERVED_PEAK_RSS_KIB=39632\n"
+  },
+  {
+    "command": "../portfolio-delivery-20261012/.venv/bin/ruff check src tests tools --select E4,E7,E9,F",
+    "exit_status": 0,
+    "elapsed_seconds": 0.01,
+    "classification": "OBSERVED",
+    "output": "All checks passed!\nREVIEW_OBSERVED_PEAK_RSS_KIB=14352\n"
+  },
+  {
+    "command": "../portfolio-delivery-20261012/.venv/bin/ruff format --check src tests tools",
+    "exit_status": 0,
+    "elapsed_seconds": 0.01,
+    "classification": "OBSERVED",
+    "output": "3 files already formatted\nREVIEW_OBSERVED_PEAK_RSS_KIB=15432\n"
+  },
+  {
+    "command": ".venv/bin/pip check",
+    "exit_status": 0,
+    "elapsed_seconds": 0.446,
+    "classification": "OBSERVED",
+    "output": "No broken requirements found.\nREVIEW_OBSERVED_PEAK_RSS_KIB=46404\n"
+  }
+]

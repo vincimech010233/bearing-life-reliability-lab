@@ -1,0 +1,179 @@
+{
+  "classification": "VERIFIED",
+  "timestamp": "2026-10-12T11:48:15.978660+00:00",
+  "initial_clean": true,
+  "checks": [
+    {
+      "command": ".venv/bin/pip check",
+      "exit": 0,
+      "output": "No broken requirements found.\n"
+    },
+    {
+      "command": ".venv/bin/python -m unittest discover -s tests -v",
+      "exit": 0,
+      "output": "test_dimension_invariance (test_bearing.BearingTests.test_dimension_invariance) ... ok\ntest_numerical_limits (test_bearing.BearingTests.test_numerical_limits) ... ok\ntest_reference (test_bearing.BearingTests.test_reference) ... ok\ntest_rejection (test_bearing.BearingTests.test_rejection) ... ok\ntest_roller_reference (test_bearing.BearingTests.test_roller_reference) ... ok\ntest_scaling (test_bearing.BearingTests.test_scaling) ... ok\ntest_seeded_and_exact_uncertainty (test_bearing.BearingTests.test_seeded_and_exact_uncertainty) ... ok\ntest_sensitivity_derivatives (test_bearing.BearingTests.test_sensitivity_derivatives) ... ok\ntest_units_ratio_and_unknown_fields (test_bearing.BearingTests.test_units_ratio_and_unknown_fields) ... ok\ntest_zero_uncertainty (test_bearing.BearingTests.test_zero_uncertainty) ... ok\n\n----------------------------------------------------------------------\nRan 10 tests in 0.034s\n\nOK\n"
+    },
+    {
+      "command": "[workspace]/projects/portfolio-delivery-20261012/.venv/bin/ruff check src tests tools --select E4,E7,E9,F",
+      "exit": 0,
+      "output": "All checks passed!\n"
+    },
+    {
+      "command": "[workspace]/projects/portfolio-delivery-20261012/.venv/bin/ruff format --check src tests tools",
+      "exit": 0,
+      "output": "3 files already formatted\n"
+    }
+  ],
+  "history_scan": {
+    "unique_blobs": 34,
+    "flags": [],
+    "classification": "OBSERVED",
+    "scope": "Conservative credential/private-host-path patterns; not exhaustive secret detection; all reachable git blobs"
+  },
+  "license": {
+    "mit_present": true,
+    "third_party_metadata": [
+      "LICENSE",
+      "results/licenses.json",
+      "results/python-licenses.json"
+    ],
+    "limitations": "Registry metadata reviewed; exhaustive legal/supply-chain review NOT_VERIFIED. Project license does not relicense third-party dependencies."
+  },
+  "dependency_audit": {
+    "classification": "OBSERVED",
+    "timestamp": "2026-10-12T11:48:15.978660+00:00",
+    "queries": [
+      {
+        "package": {
+          "name": "contourpy",
+          "ecosystem": "PyPI"
+        },
+        "version": "1.4.0"
+      },
+      {
+        "package": {
+          "name": "cycler",
+          "ecosystem": "PyPI"
+        },
+        "version": "0.12.1"
+      },
+      {
+        "package": {
+          "name": "fonttools",
+          "ecosystem": "PyPI"
+        },
+        "version": "4.66.1"
+      },
+      {
+        "package": {
+          "name": "kiwisolver",
+          "ecosystem": "PyPI"
+        },
+        "version": "1.5.1"
+      },
+      {
+        "package": {
+          "name": "matplotlib",
+          "ecosystem": "PyPI"
+        },
+        "version": "3.11.2"
+      },
+      {
+        "package": {
+          "name": "numpy",
+          "ecosystem": "PyPI"
+        },
+        "version": "2.5.4"
+      },
+      {
+        "package": {
+          "name": "packaging",
+          "ecosystem": "PyPI"
+        },
+        "version": "26.3"
+      },
+      {
+        "package": {
+          "name": "pillow",
+          "ecosystem": "PyPI"
+        },
+        "version": "12.3.0"
+      },
+      {
+        "package": {
+          "name": "pyparsing",
+          "ecosystem": "PyPI"
+        },
+        "version": "3.3.3"
+      },
+      {
+        "package": {
+          "name": "python-dateutil",
+          "ecosystem": "PyPI"
+        },
+        "version": "2.9.0.post0"
+      },
+      {
+        "package": {
+          "name": "six",
+          "ecosystem": "PyPI"
+        },
+        "version": "1.17.0"
+      },
+      {
+        "package": {
+          "name": "ruff",
+          "ecosystem": "PyPI"
+        },
+        "version": "0.17.0"
+      }
+    ],
+    "response": {
+      "results": [
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {}
+      ]
+    },
+    "advisories": 0,
+    "scope": "OSV version lookup; no vulnerability-free or full supply-chain/legal assurance"
+  },
+  "tests_pass": true,
+  "working_tree_clean": true,
+  "reviewed_commit": "047b7baf288ad3d2ee52a6084dca24a05bfb54e4",
+  "phase": "Prepublication verification of implementation; documentation/evidence additions follow in the publication commit",
+  "example_reproduction": {
+    "classification": "VERIFIED",
+    "checks": [
+      {
+        "command": [
+          "[workspace]/projects/bearing-life-reliability-lab/.venv/bin/python",
+          "src/bearing.py",
+          "examples/bearing.json",
+          "[workspace]/projects/portfolio-publication-20261012/examples/bearing-life-reliability-lab"
+        ],
+        "exit": 0,
+        "output": ""
+      }
+    ],
+    "semantic_equal": true,
+    "comparison_scope": "Exact JSON semantic equality with committed result",
+    "output": "examples/bearing-life-reliability-lab/report.json"
+  },
+  "authorship_privacy": {
+    "classification": "VERIFIED",
+    "original_git_author_identities_already_in_public_profile_history": true,
+    "address_values_retained_in_this_record": false
+  },
+  "hosted_ci": "NOT_VERIFIED at this prepublication gate; use exact commit GitHub Actions run after push",
+  "known_limitations_retained": true
+}
