@@ -1,0 +1,145 @@
+{
+  "timestamp": "2026-10-13T08:06:18.873175+00:00",
+  "classification": "OBSERVED",
+  "baseline_commit": "920ef21bfce174d7bc8d8add7e968b35994c70f0",
+  "checks": [
+    {
+      "command": [
+        ".venv/bin/python",
+        "-V"
+      ],
+      "exit_status": 0,
+      "output": "Python 3.12.3\n",
+      "classification": "OBSERVED"
+    },
+    {
+      "command": [
+        "../portfolio-delivery-20261012/.venv/bin/ruff",
+        "--version"
+      ],
+      "exit_status": 0,
+      "output": "ruff 0.17.0\n",
+      "classification": "OBSERVED"
+    },
+    {
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "exit_status": 0,
+      "output": "No broken requirements found.\n",
+      "classification": "OBSERVED"
+    },
+    {
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "exit_status": 0,
+      "output": "OBSERVED 1 queries 0 advisories\ntest_degenerate_extreme_samples_render (test_bearing.BearingTests.test_degenerate_extreme_samples_render) ... ok\ntest_dimension_invariance (test_bearing.BearingTests.test_dimension_invariance) ... ok\ntest_numerical_limits (test_bearing.BearingTests.test_numerical_limits) ... ok\ntest_reference (test_bearing.BearingTests.test_reference) ... ok\ntest_rejection (test_bearing.BearingTests.test_rejection) ... ok\ntest_roller_reference (test_bearing.BearingTests.test_roller_reference) ... ok\ntest_scaling (test_bearing.BearingTests.test_scaling) ... ok\ntest_seeded_and_exact_uncertainty (test_bearing.BearingTests.test_seeded_and_exact_uncertainty) ... ok\ntest_sensitivity_derivatives (test_bearing.BearingTests.test_sensitivity_derivatives) ... ok\ntest_units_ratio_and_unknown_fields (test_bearing.BearingTests.test_units_ratio_and_unknown_fields) ... ok\ntest_zero_uncertainty (test_bearing.BearingTests.test_zero_uncertainty) ... ok\ntest_actual_read_is_bounded_without_stat (test_config_io.ConfigIOTests.test_actual_read_is_bounded_without_stat) ... ok\ntest_both_clis_preserve_existing_output_on_invalid_input (test_config_io.ConfigIOTests.test_both_clis_preserve_existing_output_on_invalid_input) ... ok\ntest_deep_json_has_controlled_error (test_config_io.ConfigIOTests.test_deep_json_has_controlled_error) ... ok\ntest_duplicate_fields_at_any_depth (test_config_io.ConfigIOTests.test_duplicate_fields_at_any_depth) ... ok\ntest_exact_size_and_utf8 (test_config_io.ConfigIOTests.test_exact_size_and_utf8) ... ok\ntest_examples_decode_without_alteration (test_config_io.ConfigIOTests.test_examples_decode_without_alteration) ... ok\ntest_advisory_is_failure (test_dependency_audit.DependencyAuditTests.test_advisory_is_failure) ... ok\ntest_complete_clean_response (test_dependency_audit.DependencyAuditTests.test_complete_clean_response) ... ok\ntest_incomplete_or_invalid_response_is_not_verified (test_dependency_audit.DependencyAuditTests.test_incomplete_or_invalid_response_is_not_verified) ... ok\ntest_network_failure_and_empty_scope_fail_closed (test_dependency_audit.DependencyAuditTests.test_network_failure_and_empty_scope_fail_closed) ... ok\ntest_new_output_preserves_historical_evidence (test_dependency_audit.DependencyAuditTests.test_new_output_preserves_historical_evidence) ... ok\ntest_report_and_bounded_input (test_duty_cycle_cli.CLIValidationTests.test_report_and_bounded_input) ... error: input exceeds 64 KiB\nok\ntest_one_case (test_duty_cycle_model.DutyCycleTests.test_one_case) ... ok\ntest_extreme_supported_single_segments_match_closed_form (test_duty_cycle_reference.DutyCycleReferenceTests.test_extreme_supported_single_segments_match_closed_form) ... ok\ntest_independent_decimal_damage_reference (test_duty_cycle_reference.DutyCycleReferenceTests.test_independent_decimal_damage_reference) ... ok\ntest_invalid_segment_numbers_and_schema (test_duty_cycle_reference.DutyCycleReferenceTests.test_invalid_segment_numbers_and_schema) ... ok\ntest_order_split_duration_and_speed_invariants (test_duty_cycle_reference.DutyCycleReferenceTests.test_order_split_duration_and_speed_invariants) ... ok\ntest_units_and_rating_load_scaling (test_duty_cycle_reference.DutyCycleReferenceTests.test_units_and_rating_load_scaling) ... ok\ntest_rejects_bad_inputs (test_duty_cycle_validation.DutyCycleValidationTests.test_rejects_bad_inputs) ... ok\ntest_rare_heavy_load_contribution (test_duty_cycle_variable.VariableLoadTests.test_rare_heavy_load_contribution) ... ok\ntest_roller_exponent (test_duty_cycle_variable.VariableLoadTests.test_roller_exponent) ... ok\ntest_speed_weighted_inverse_life (test_duty_cycle_variable.VariableLoadTests.test_speed_weighted_inverse_life) ... ok\n\n----------------------------------------------------------------------\nRan 33 tests in 2.145s\n\nOK\n",
+      "classification": "OBSERVED"
+    },
+    {
+      "command": [
+        ".venv/bin/python",
+        "-S",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_duty_cycle*.py",
+        "-v"
+      ],
+      "exit_status": 0,
+      "output": "test_report_and_bounded_input (test_duty_cycle_cli.CLIValidationTests.test_report_and_bounded_input) ... error: input exceeds 64 KiB\nok\ntest_one_case (test_duty_cycle_model.DutyCycleTests.test_one_case) ... ok\ntest_extreme_supported_single_segments_match_closed_form (test_duty_cycle_reference.DutyCycleReferenceTests.test_extreme_supported_single_segments_match_closed_form) ... ok\ntest_independent_decimal_damage_reference (test_duty_cycle_reference.DutyCycleReferenceTests.test_independent_decimal_damage_reference) ... ok\ntest_invalid_segment_numbers_and_schema (test_duty_cycle_reference.DutyCycleReferenceTests.test_invalid_segment_numbers_and_schema) ... ok\ntest_order_split_duration_and_speed_invariants (test_duty_cycle_reference.DutyCycleReferenceTests.test_order_split_duration_and_speed_invariants) ... ok\ntest_units_and_rating_load_scaling (test_duty_cycle_reference.DutyCycleReferenceTests.test_units_and_rating_load_scaling) ... ok\ntest_rejects_bad_inputs (test_duty_cycle_validation.DutyCycleValidationTests.test_rejects_bad_inputs) ... ok\ntest_rare_heavy_load_contribution (test_duty_cycle_variable.VariableLoadTests.test_rare_heavy_load_contribution) ... ok\ntest_roller_exponent (test_duty_cycle_variable.VariableLoadTests.test_roller_exponent) ... ok\ntest_speed_weighted_inverse_life (test_duty_cycle_variable.VariableLoadTests.test_speed_weighted_inverse_life) ... ok\n\n----------------------------------------------------------------------\nRan 11 tests in 0.281s\n\nOK\n",
+      "classification": "OBSERVED"
+    },
+    {
+      "command": [
+        "../portfolio-delivery-20261012/.venv/bin/ruff",
+        "check",
+        "src",
+        "tests",
+        "tools",
+        "--select",
+        "E4,E7,E9,F"
+      ],
+      "exit_status": 0,
+      "output": "All checks passed!\n",
+      "classification": "OBSERVED"
+    },
+    {
+      "command": [
+        "../portfolio-delivery-20261012/.venv/bin/ruff",
+        "format",
+        "--check",
+        "src",
+        "tests",
+        "tools"
+      ],
+      "exit_status": 0,
+      "output": "12 files already formatted\n",
+      "classification": "OBSERVED"
+    },
+    {
+      "command": [
+        ".venv/bin/python",
+        "src/bearing.py",
+        "examples/bearing.json",
+        "results/review-20261013/constant-example"
+      ],
+      "exit_status": 0,
+      "output": "",
+      "classification": "OBSERVED"
+    },
+    {
+      "command": [
+        ".venv/bin/python",
+        "src/duty_cycle.py",
+        "examples/duty_cycle.json",
+        "results/review-20261013/duty-cycle-report.json"
+      ],
+      "exit_status": 0,
+      "output": "",
+      "classification": "OBSERVED"
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_status": 0,
+      "output": "",
+      "classification": "OBSERVED"
+    }
+  ],
+  "source_sha256": {
+    "src/config_io.py": "5fcd11dab6f9a9278490a958d5e7c19ae3d9054ae0a4ea964c0227e1c7ee0e3a",
+    "src/bearing.py": "c9ee34a38a2a5cd74f14f4ea67307aa1040307bdf6bdedcc8db79a01cf5615de",
+    "src/duty_cycle.py": "97b51a59d49d1498ff779b2e102db0b54b65f13cdd36ff410fdbe2c4eea295dc",
+    "tests/test_bearing.py": "620153c5c32d60ea81ee6f9b0e58cd0b2e8956d4caa8838ec46bab8e5cee7f3a",
+    "tests/test_duty_cycle_variable.py": "7318e11912f46bb2c89828f8327d1908ad41669dbd5c7d236914dd4ce476ecd5",
+    "tests/test_duty_cycle_validation.py": "566a4b3589406a61ee7e6c498f1b858e1da0862a4bf335336790b898baed2b33",
+    "tests/test_dependency_audit.py": "c7dca19347e786ee154f1dabf80dd197e730b303c34bea0ae73381ddfc6f5cdc",
+    "tests/test_duty_cycle_model.py": "8242ed2879ab2bb09273c11bf5cfe7fe2d9c69dde0f7473b2841d8661f41b1f8",
+    "tests/test_duty_cycle_reference.py": "7f75429b210eb9dd961da5a415db05c74bced9824d60c04da5d8bd6329024222",
+    "tests/test_config_io.py": "34bf5c10cafd8990a3dafeef6e9e3a5d8ff44412d4f27f8ac46be385e89189e1",
+    "tests/test_duty_cycle_cli.py": "de37a1c9fdc2910a5774d1df442cad6372961e37ec404c2004d87a827354f296",
+    "tools/dependency_audit.py": "69eebf248ba329a11e617b70af2536d757c0037ea88ce5a8580f81173e2bc0fe",
+    ".github/workflows/ci.yml": "0bbf343fa98641841f590ce7ee2fc9e891df0fb15f3202461530d103dcffc39f",
+    "requirements.lock": "2cd1ca646bc1c05789c6187b39ad5ff613fbca4359a1fe2da86b378a176810d5",
+    "requirements-dev.txt": "cfd9de13208470b815dad9a09ec13b0e6052e1cdeb1193d78c3085fa1026441b"
+  },
+  "mandatory_project_checks_pass": true,
+  "physical_accuracy": "NOT_VERIFIED"
+}

@@ -1,0 +1,56 @@
+[
+  {
+    "fixture": "no_queries",
+    "status": 2,
+    "classification": "NOT_VERIFIED",
+    "error": "no locked dependencies found"
+  },
+  {
+    "fixture": "missing_results",
+    "status": 2,
+    "classification": "NOT_VERIFIED",
+    "advisory_count": null,
+    "error": "OSV response does not cover every locked dependency"
+  },
+  {
+    "fixture": "missing_dependency",
+    "status": 2,
+    "classification": "NOT_VERIFIED",
+    "advisory_count": null,
+    "error": "OSV response does not cover every locked dependency"
+  },
+  {
+    "fixture": "bad_entry",
+    "status": 2,
+    "classification": "NOT_VERIFIED",
+    "advisory_count": null,
+    "error": "invalid OSV result entries"
+  },
+  {
+    "fixture": "bad_vulns",
+    "status": 2,
+    "classification": "NOT_VERIFIED",
+    "advisory_count": null,
+    "error": "invalid OSV result entries"
+  },
+  {
+    "fixture": "clean",
+    "status": 0,
+    "classification": "OBSERVED",
+    "advisory_count": 0,
+    "error": null
+  },
+  {
+    "fixture": "advisory",
+    "status": 1,
+    "classification": "OBSERVED",
+    "advisory_count": 1,
+    "error": null
+  },
+  {
+    "fixture": "network_failure",
+    "status": 2,
+    "classification": "NOT_VERIFIED",
+    "error": "synthetic unavailable service"
+  }
+]

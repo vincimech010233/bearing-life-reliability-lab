@@ -1,0 +1,7 @@
+{
+  "classification": "OBSERVED",
+  "scope": "Conservative credential and private host-path patterns over all reachable Git blobs and changed source/docs/evidence. No values copied; not exhaustive detection.",
+  "historical_blobs": 51,
+  "history_flags": [],
+  "working_flags": []
+}

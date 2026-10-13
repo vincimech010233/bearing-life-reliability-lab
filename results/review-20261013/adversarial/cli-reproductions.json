@@ -1,0 +1,15 @@
+{
+  "deep_nesting": {
+    "input_bytes": 4001,
+    "returncode": 2,
+    "stderr": "error: synthetic profile with exact required fields only\n",
+    "report_exists": false
+  },
+  "oversized_fifo": {
+    "stat_bytes": 0,
+    "supplied_bytes": 70219,
+    "returncode": 0,
+    "stderr": "",
+    "report_exists": true
+  }
+}

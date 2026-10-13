@@ -1,0 +1,45 @@
+{
+  "classification": "OBSERVED",
+  "scope": "Preserved review/development failures; successful later checks are separate evidence",
+  "attempts": [
+    {
+      "command": "git fetch origin (sandbox)",
+      "exit_status": 128,
+      "reason": "DNS resolution unavailable; succeeded only after authorized network execution"
+    },
+    {
+      "command": "gh api repository (sandbox)",
+      "exit_status": 1,
+      "reason": "Network unavailable; succeeding GitHub reads recorded separately"
+    },
+    {
+      "command": "initial Ruff check of new source/tests",
+      "exit_status": 1,
+      "findings": [
+        "unused MAX_BYTES import",
+        "three import-position findings"
+      ],
+      "disposition": "Corrected then full lint and format pass; no failing code was published"
+    },
+    {
+      "operation": "apply_patch after Ruff reformatted audit conditional",
+      "status": "failed_without_mutation",
+      "reason": "Expected context no longer matched; reread exact code and applied correction"
+    },
+    {
+      "command": "workspace validator",
+      "exit_status": 1,
+      "reason": "Pre-existing event_id absent at row337; not a repository CI check"
+    },
+    {
+      "operation": "Schaeffler catalog web read",
+      "status": "inconclusive",
+      "reason": "Web-reader error; prior source interpretation not reverified"
+    },
+    {
+      "operation": "baseline eight-extension-test claim",
+      "status": "NOT_VERIFIED",
+      "reason": "Submitted suite contains six extension tests,16 total; prior claim retained and qualified"
+    }
+  ]
+}

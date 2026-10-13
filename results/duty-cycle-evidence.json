@@ -1,0 +1,20 @@
+{
+  "date": "2026-10-13",
+  "scope": "synthetic, pure-radial two-step basic L10",
+  "environment": "local Python 3; stdlib extension; no network or physical measurement",
+  "commands_run": [
+    "python3 -m unittest discover -s tests -v",
+    "python3 src/duty_cycle.py examples/duty_cycle.json results/duty-cycle-report.json"
+  ],
+  "local_original_extension_test_result": "8 tests / 8 passed",
+  "example": {
+    "average_speed_rpm": 1500.0,
+    "equivalent_radial_load_N": 3565.654160826243,
+    "basic_L10_million_revolutions": 22.058823529411764,
+    "basic_L10_hours": 245.09803921568624,
+    "modeled_duty_cycle_fatigue_fraction": 0.00816
+  },
+  "hosted_CI": "NOT_VERIFIED",
+  "physical_accuracy": "NOT_VERIFIED",
+  "claims": "Algebra and synthetic fixtures only; not a service-life prediction"
+}

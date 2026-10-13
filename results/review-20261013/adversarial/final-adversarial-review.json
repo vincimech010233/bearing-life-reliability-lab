@@ -1,0 +1,136 @@
+{
+  "timestamp_utc": "2026-10-13T08:06:16.789784+00:00",
+  "classification": "VERIFIED",
+  "decision": "APPROVE_WITHIN_SYNTHETIC_PROJECT_SCOPE",
+  "reviewer": "Separate same-model adversarial agent; internal review, not an external audit",
+  "baseline_commit": "920ef21bfce174d7bc8d8add7e968b35994c70f0",
+  "reviewed_file_sha256": {
+    ".github/workflows/ci.yml": "0bbf343fa98641841f590ce7ee2fc9e891df0fb15f3202461530d103dcffc39f",
+    "requirements-dev.txt": "cfd9de13208470b815dad9a09ec13b0e6052e1cdeb1193d78c3085fa1026441b",
+    "requirements.lock": "2cd1ca646bc1c05789c6187b39ad5ff613fbca4359a1fe2da86b378a176810d5",
+    "requirements.txt": "af9c9ea6a882ecdb9816a50416e4e777ff38447e9caf3b8e4c630ce2f227d324",
+    "src/bearing.py": "c9ee34a38a2a5cd74f14f4ea67307aa1040307bdf6bdedcc8db79a01cf5615de",
+    "src/config_io.py": "5fcd11dab6f9a9278490a958d5e7c19ae3d9054ae0a4ea964c0227e1c7ee0e3a",
+    "src/duty_cycle.py": "97b51a59d49d1498ff779b2e102db0b54b65f13cdd36ff410fdbe2c4eea295dc",
+    "tests/test_bearing.py": "620153c5c32d60ea81ee6f9b0e58cd0b2e8956d4caa8838ec46bab8e5cee7f3a",
+    "tests/test_config_io.py": "34bf5c10cafd8990a3dafeef6e9e3a5d8ff44412d4f27f8ac46be385e89189e1",
+    "tests/test_dependency_audit.py": "c7dca19347e786ee154f1dabf80dd197e730b303c34bea0ae73381ddfc6f5cdc",
+    "tests/test_duty_cycle_cli.py": "de37a1c9fdc2910a5774d1df442cad6372961e37ec404c2004d87a827354f296",
+    "tests/test_duty_cycle_model.py": "8242ed2879ab2bb09273c11bf5cfe7fe2d9c69dde0f7473b2841d8661f41b1f8",
+    "tests/test_duty_cycle_reference.py": "7f75429b210eb9dd961da5a415db05c74bced9824d60c04da5d8bd6329024222",
+    "tests/test_duty_cycle_validation.py": "566a4b3589406a61ee7e6c498f1b858e1da0862a4bf335336790b898baed2b33",
+    "tests/test_duty_cycle_variable.py": "7318e11912f46bb2c89828f8327d1908ad41669dbd5c7d236914dd4ce476ecd5",
+    "tools/dependency_audit.py": "69eebf248ba329a11e617b70af2536d757c0037ea88ce5a8580f81173e2bc0fe"
+  },
+  "test_observations": [
+    {
+      "classification": "OBSERVED",
+      "command": ".venv/bin/python -m unittest discover -s tests -v",
+      "exit_status": 0,
+      "tests": 33,
+      "result": "PASS",
+      "output_evidence": "final-suite-output.txt"
+    },
+    {
+      "classification": "VERIFIED",
+      "criterion": "Oversized FIFO input rejected with exit2 before output",
+      "supplied_bytes": 70219,
+      "result": "PASS"
+    },
+    {
+      "classification": "VERIFIED",
+      "criterion": "32001-byte deeply nested JSON rejected by both CLIs with exit2 and no traceback/output",
+      "result": "PASS"
+    },
+    {
+      "classification": "VERIFIED",
+      "criterion": "Finite constant-sample lives at ordinary, tiny, huge and tiny-speed configurations render without warnings",
+      "result": "PASS",
+      "visual_observation": "Huge-life output inspected: legible axes, decreasing sensitivity curve, labeled constant and nominal vertical marker"
+    },
+    {
+      "classification": "VERIFIED",
+      "criterion": "200 deterministic profiles independently compared with60-digit Decimal time divided by sum(duration/interval_life)",
+      "seed": 20261013,
+      "profiles": 200,
+      "relative_tolerance": 1e-12,
+      "max_relative_difference": 4.367946866409983e-15,
+      "result": "PASS"
+    }
+  ],
+  "audit_error_response_retests": [
+    {
+      "classification": "OBSERVED",
+      "fixture": {
+        "results": [
+          {
+            "error": "synthetic server failure"
+          }
+        ]
+      },
+      "exit_status": 2,
+      "audit_classification": "NOT_VERIFIED",
+      "error": "invalid OSV result entries"
+    },
+    {
+      "classification": "OBSERVED",
+      "fixture": {
+        "results": [
+          {}
+        ],
+        "error": "synthetic server failure"
+      },
+      "exit_status": 2,
+      "audit_classification": "NOT_VERIFIED",
+      "error": "OSV returned an invalid or error response"
+    },
+    {
+      "classification": "OBSERVED",
+      "fixture": {
+        "results": [
+          {
+            "vulns": [],
+            "error": {
+              "code": 500
+            }
+          }
+        ]
+      },
+      "exit_status": 2,
+      "audit_classification": "NOT_VERIFIED",
+      "error": "invalid OSV result entries"
+    }
+  ],
+  "resolved_findings": [
+    "Actual input-read bound bypass",
+    "Deep JSON uncaught recursion",
+    "Zero-width extreme histogram failure",
+    "Explicit audit error response incorrectly accepted as clean"
+  ],
+  "unresolved_project_release_blockers": [],
+  "ci_review": {
+    "classification": "OBSERVED",
+    "findings": "Read-only contents permissions; persisted checkout credentials disabled; official actions pinned to full commits; OSV audit mandatory and failclosed; both CLIs and tests exercised; timeout specified",
+    "hosted_execution": "NOT_VERIFIED_BY_THIS_REVIEWER; release engineer must verify pushed head and merged commit"
+  },
+  "workspace_validator_scope": {
+    "classification": "INFERRED",
+    "assessment": "A separately reported pre-existing global event-log validation failure does not invalidate this repository numerical/CI checks. Preserve its failure and report it; do not claim workspace health passed. No unrelated infrastructure was changed by reviewer."
+  },
+  "limitations": [
+    "Synthetic algebra/error-path validation only; physical accuracy and real bearing/catalog applicability NOT_VERIFIED",
+    "Public duplicate classification, current registry OSV response, license evidence and history/privacy scans are performed by release engineer; not independently verified by this local re-review",
+    "No claim of exhaustive security/legal review, ISO conformity, package authenticity or independent external audit",
+    "Final publication, permissions, branch rules and hosted CI must be verified by release engineer",
+    "Reviewed hashes identify working files; modifications after these hashes require appropriate re-review"
+  ],
+  "evidence_files": [
+    "cli-reproductions.json",
+    "deep-nesting-baseline.json",
+    "plot-reproductions.json",
+    "numerical-reference.json",
+    "final-retest-observations.json",
+    "audit-reference-observations.json",
+    "final-suite-output.txt"
+  ]
+}

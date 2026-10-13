@@ -1,0 +1,18 @@
+[
+  {
+    "cli": "bearing.py",
+    "baseline_commit": "920ef21",
+    "input_bytes": 32001,
+    "returncode": 1,
+    "stderr": "Traceback (most recent call last):\n  File \"[review-fixture]/original-920ef21/bearing.py\", line 210, in <module>\n    sys.exit(main())\n             ^^^^^^\n  File \"[review-fixture]/original-920ef21/bearing.py\", line 183, in main\n    r, s = analyze(json.loads(p.read_text()))\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.12/json/__init__.py\", line 346, in loads\n    return _default_decoder.decode(s)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.12/json/decoder.py\", line 337, in decode\n    obj, end = self.raw_decode(s, idx=_w(s, 0).end())\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.12/json/decoder.py\", line 353, in raw_decode\n    obj, end = self.scan_once(s, idx)\n               ^^^^^^^^^^^^^^^^^^^^^^\nRecursionError: maximum recursion depth exceeded while decoding a JSON array from a unicode string\n",
+    "report_exists": false
+  },
+  {
+    "cli": "duty_cycle.py",
+    "baseline_commit": "920ef21",
+    "input_bytes": 32001,
+    "returncode": 1,
+    "stderr": "Traceback (most recent call last):\n  File \"[review-fixture]/original-920ef21/duty_cycle.py\", line 192, in <module>\n    sys.exit(main())\n             ^^^^^^\n  File \"[review-fixture]/original-920ef21/duty_cycle.py\", line 181, in main\n    report = calculate(json.loads(args.input.read_text(encoding=\"utf-8\")))\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.12/json/__init__.py\", line 346, in loads\n    return _default_decoder.decode(s)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.12/json/decoder.py\", line 337, in decode\n    obj, end = self.raw_decode(s, idx=_w(s, 0).end())\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.12/json/decoder.py\", line 353, in raw_decode\n    obj, end = self.scan_once(s, idx)\n               ^^^^^^^^^^^^^^^^^^^^^^\nRecursionError: maximum recursion depth exceeded while decoding a JSON array from a unicode string\n",
+    "report_exists": false
+  }
+]

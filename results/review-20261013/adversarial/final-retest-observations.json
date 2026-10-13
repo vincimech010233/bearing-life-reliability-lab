@@ -1,0 +1,93 @@
+[
+  {
+    "name": "tiny_life",
+    "life_hours": 1.1111111111111115e-305,
+    "status": "success",
+    "png_bytes": 62243,
+    "warnings": []
+  },
+  {
+    "name": "huge_life",
+    "life_hours": 1.6666666666666674e+244,
+    "status": "success",
+    "png_bytes": 86045,
+    "warnings": []
+  },
+  {
+    "name": "normal_zero_cv",
+    "life_hours": 1388.888888888889,
+    "status": "success",
+    "png_bytes": 84728,
+    "warnings": []
+  },
+  {
+    "name": "tiny_speed",
+    "life_hours": 2.0833333333333336e+306,
+    "status": "success",
+    "png_bytes": 86398,
+    "warnings": []
+  },
+  {
+    "name": "deep-nesting-src/bearing.py",
+    "returncode": 2,
+    "stderr": "JSON input is nested too deeply\n",
+    "report_exists": false
+  },
+  {
+    "name": "deep-nesting-src/duty_cycle.py",
+    "returncode": 2,
+    "stderr": "error: JSON input is nested too deeply\n",
+    "report_exists": false
+  },
+  {
+    "name": "oversized-fifo",
+    "supplied_bytes": 70219,
+    "returncode": 2,
+    "stderr": "error: input exceeds 64 KiB\n",
+    "writer_result": [
+      "complete"
+    ],
+    "report_exists": false
+  },
+  {
+    "name": "audit-error-shaped-response",
+    "synthetic_response": {
+      "results": [
+        {
+          "error": "synthetic server failure"
+        }
+      ]
+    },
+    "status": 0,
+    "classification": "OBSERVED",
+    "advisory_count": 0
+  },
+  {
+    "name": "audit-error-shaped-response",
+    "synthetic_response": {
+      "results": [
+        {}
+      ],
+      "error": "synthetic server failure"
+    },
+    "status": 0,
+    "classification": "OBSERVED",
+    "advisory_count": 0
+  },
+  {
+    "name": "audit-error-shaped-response",
+    "synthetic_response": {
+      "results": [
+        {
+          "vulns": [],
+          "error": {
+            "code": 500
+          }
+        }
+      ]
+    },
+    "status": 0,
+    "classification": "OBSERVED",
+    "advisory_count": 0
+  }
+]
