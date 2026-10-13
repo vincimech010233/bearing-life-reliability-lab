@@ -43,12 +43,15 @@ def calculate(config):
     if type(unit) is not str or unit not in ("N", "kN"):
         raise ValueError("force_unit must be N or kN")
     factor = 1.0 if unit == "N" else 1000.0
-    rating = finite_number(
-        config["dynamic_rating"],
-        "dynamic_rating",
-        minimum=1e-3 / factor,
-        maximum=1e9 / factor,
-    ) * factor
+    rating = (
+        finite_number(
+            config["dynamic_rating"],
+            "dynamic_rating",
+            minimum=1e-3 / factor,
+            maximum=1e9 / factor,
+        )
+        * factor
+    )
     raw = config["segments"]
     if not isinstance(raw, list) or not 1 <= len(raw) <= MAX_SEGMENTS:
         raise ValueError("segments must be a list of 1-100 entries")
@@ -60,12 +63,15 @@ def calculate(config):
             raise ValueError(
                 f"segment {index}: exactly radial_load, speed_rpm, duration_hours"
             )
-        load = finite_number(
-            segment["radial_load"],
-            f"segment {index} radial_load",
-            minimum=1e-3 / factor,
-            maximum=1e9 / factor,
-        ) * factor
+        load = (
+            finite_number(
+                segment["radial_load"],
+                f"segment {index} radial_load",
+                minimum=1e-3 / factor,
+                maximum=1e9 / factor,
+            )
+            * factor
+        )
         speed = finite_number(
             segment["speed_rpm"],
             f"segment {index} speed_rpm",
@@ -162,8 +168,12 @@ def calculate(config):
 
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("input", type=Path, help="Synthetic JSON duty-cycle profile, <=64 KiB")
-    parser.add_argument("output", type=Path, help="Output JSON file (created/overwritten)")
+    parser.add_argument(
+        "input", type=Path, help="Synthetic JSON duty-cycle profile, <=64 KiB"
+    )
+    parser.add_argument(
+        "output", type=Path, help="Output JSON file (created/overwritten)"
+    )
     args = parser.parse_args(argv)
     try:
         if args.input.stat().st_size > MAX_BYTES:
