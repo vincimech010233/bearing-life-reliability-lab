@@ -1,12 +1,13 @@
 import json
 import math
 import sys
+import tempfile
 import unittest
 from pathlib import Path
 import numpy as np
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
-from bearing import analyze, life, validate
+from bearing import analyze, life, plot, validate
 
 
 class BearingTests(unittest.TestCase):
@@ -61,6 +62,11 @@ class BearingTests(unittest.TestCase):
             ("speed_unit", "Hz"),
             ("samples", 100000),
             ("speed", True),
+            ("dynamic_rating", 10**1000),
+            ("speed", 10**1000),
+            ("bearing_type", []),
+            ("force_unit", {}),
+            ("speed_unit", []),
         ]:
             c = self.fixture()
             c[key] = v
@@ -91,6 +97,16 @@ class BearingTests(unittest.TestCase):
             r["uncertainty"]["analytic_lognormal_quantiles_hours"][0],
             r["basic_L10_hours"],
         )
+
+    def test_degenerate_extreme_samples_render(self):
+        c = self.fixture()
+        c.update(dynamic_rating=1e9, radial_load=1e-70, speed=0.001)
+        c["cv"] = {"rating": 0, "load": 0, "speed": 0}
+        report, samples = analyze(c)
+        with tempfile.TemporaryDirectory() as directory:
+            output = Path(directory) / "bearing.png"
+            plot(report, samples, output)
+            self.assertTrue(output.read_bytes().startswith(b"\x89PNG\r\n\x1a\n"))
 
     def test_units_ratio_and_unknown_fields(self):
         c = self.fixture()

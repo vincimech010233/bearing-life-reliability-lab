@@ -25,6 +25,15 @@ radial load and 245.09803921568624 basic L10 hours. The locally committed
 smoke/equation/validation tests and hosted CI must be checked at the PR
 SHA before claiming remote verification. No material/field validation.
 
+**2026-10-13 review correction (OBSERVED):** The submitted PR at `920ef21`
+contains six duty-cycle test methods, and its full suite runs 16 tests.
+The historical eight-test claim above and in `results/duty-cycle-evidence.json`
+is NOT_VERIFIED by the committed suite and is retained as an earlier claim.
+Current commands and results are recorded separately in
+`results/review-20261013/validation.json` and `docs/PR1_REVIEW.md`.
+The SKF source was read during this review; the Schaeffler URL returned a
+web-reader error, so its prior interpretation was not independently reverified.
+
 **LEARN**
 - LEARNING: Revolution fractions, rather than time fractions, govern the
   equivalent fatigue load when speed changes.

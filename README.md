@@ -19,6 +19,15 @@ OPENBLAS_NUM_THREADS=2 MPLBACKEND=Agg .venv/bin/python src/bearing.py examples/b
 
 Example C=10 kN, Fr=2 kN and n=1500 rpm gives 125 million revolutions and 1388.8889 h. JSON/Markdown and bearing.png include sensitivity and supplied-parameter uncertainty. Independent lognormal inputs use arithmetic means/CVs; analytic output quantiles are compared to Monte Carlo, whose residual errors are reported. These parameter quantiles are separate from L10's 90% fatigue reliability.
 
+For changing loads and speeds, the [stepwise duty-cycle calculator](docs/DUTY_CYCLE.md) uses revolution-weighted equivalent radial load. This extension needs only the Python standard library:
+
+```sh
+python3 src/duty_cycle.py examples/duty_cycle.json results/duty-cycle-report.json
+python3 -m unittest discover -s tests -p 'test_duty_cycle*.py' -v
+```
+
+The fictional two-mode example yields 245.098039 hours of basic L10. Each mode's modeled fatigue contribution is a ratio under the repeated-duty assumption, not a failure probability or an individual remaining-life estimate.
+
 ## Limits, business value and security
 
 No certified ISO implementation, manufacturer catalog, bearing selection, modified reliability factors, static load check, minimum-load/skidding check, axial calculation, contamination/lubrication adjustment or other failure modes. Constant equivalent radial load/speed and conventional rolling-fatigue conditions only. Hypothetical values/CVs are not real catalog evidence. No network execution or personal data; maximum 64 KiB config. Portfolio value is auditable equations, dimensional/scaling tests and analytic uncertainty comparison.
@@ -37,6 +46,8 @@ MIT; see LICENSE.
 
 ## Reproducing development checks
 
-Optional public-registry dependency review: `python3 tools/dependency_audit.py .` writes `results/dependency-audit.json`. This developer check uses the free OSV API and is separate from offline application execution. Zero listed advisories does not prove absence of vulnerabilities. License evidence is in results/licenses.json and, for scientific projects, results/python-licenses.json.
+Optional public-registry dependency review: `python3 tools/dependency_audit.py . --output results/new-dependency-audit.json` preserves historical evidence. This developer check uses the free OSV API and is separate from offline application execution. Exit codes are 0 for a complete response with no listed advisories, 1 for listed advisories, and 2 for missing or incomplete evidence. Zero listed advisories does not prove absence of vulnerabilities. License evidence is in results/python-licenses.json and results/review-20261013/licenses.json.
+
+The [PR #1 critical review](docs/PR1_REVIEW.md) records corrected defects, public duplicate classifications, numerical validation and remaining uncertainty. Both CLIs read at most 64 KiB of UTF-8 JSON and reject duplicate fields and excessive nesting. CI runs the full suite, both examples, dependency consistency, a fail-closed OSV advisory query and Ruff using pinned action commits and read-only repository permissions.
 
 Install `requirements-dev.txt` to run the recorded Ruff 0.17.0 source checks. Commands, actual versions, failed attempts, review corrections and measured peak RSS are retained in results/validation.json, results/tool-versions.json and docs/REVIEW.md. Check the GitHub Actions run for the exact commit before claiming hosted CI success; older local-delivery records retain their as-of NOT_VERIFIED status.

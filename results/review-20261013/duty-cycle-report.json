@@ -1,0 +1,56 @@
+{
+  "average_speed_rpm": 1500.0,
+  "basic_L10_hours": 245.09803921568624,
+  "basic_L10_million_revolutions": 22.058823529411764,
+  "basis": "Revolution-weighted equivalent radial load; repeated identical duty cycle; basic L10 is a 90%-survival population fatigue rating, not an individual lifetime prediction.",
+  "classification": "INFERRED",
+  "duty_cycle_hours": 2.0,
+  "duty_cycle_revolutions": 180000.0,
+  "equivalent_radial_load_N": 3565.654160826243,
+  "input": {
+    "bearing_type": "ball",
+    "dynamic_rating": 10,
+    "force_unit": "kN",
+    "segments": [
+      {
+        "duration_hours": 1,
+        "radial_load": 2,
+        "speed_rpm": 1000
+      },
+      {
+        "duration_hours": 1,
+        "radial_load": 4,
+        "speed_rpm": 2000
+      }
+    ],
+    "synthetic": true
+  },
+  "limitations": "Illustrative pure-radial P=Fr only. No axial loads, real load diagrams, catalog X/Y factors, static capacity, minimum-load or skidding checks, lubrication/contamination, shock transients, adjusted ISO rating life, field reliability or RUL validation. Segment fractions assume time at positive constant speeds; zero-rpm intervals are unsupported. Damage fraction is a model ratio, not an observed damage measurement or failure probability.",
+  "modeled_duty_cycle_fatigue_fraction": 0.00816,
+  "normalized": {
+    "basic_life_exponent": 3.0,
+    "bearing_type": "ball",
+    "dynamic_rating_N": 10000.0,
+    "segments": [
+      {
+        "duration_hours": 1.0,
+        "fraction_of_modeled_fatigue_damage": 0.05882352941176471,
+        "radial_load_N": 2000.0,
+        "revolution_fraction": 0.3333333333333333,
+        "revolutions": 60000.0,
+        "speed_rpm": 1000.0
+      },
+      {
+        "duration_hours": 1.0,
+        "fraction_of_modeled_fatigue_damage": 0.9411764705882354,
+        "radial_load_N": 4000.0,
+        "revolution_fraction": 0.6666666666666666,
+        "revolutions": 120000.0,
+        "speed_rpm": 2000.0
+      }
+    ]
+  },
+  "profile": "pure-radial-stepwise-basic-l10-v1",
+  "repeated_duty_cycles_at_basic_L10": 122.54901960784314,
+  "synthetic": true
+}

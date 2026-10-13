@@ -1,0 +1,9 @@
+{
+  "classification": "VERIFIED",
+  "criterion": "200 seeded ball/roller profiles spanning allowed bounds; independent 60-digit Decimal time / sum(duration / interval_L10_hours) agrees within 1e-12 relative error",
+  "seed": 20261013,
+  "profiles": 200,
+  "max_relative_error": 4.367946866409983e-15,
+  "failed_profiles": [],
+  "physical_validation": "NOT_VERIFIED"
+}

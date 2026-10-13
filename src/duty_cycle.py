@@ -9,9 +9,10 @@ import math
 import sys
 from pathlib import Path
 
+from config_io import read_config
+
 TOP_LEVEL = {"synthetic", "bearing_type", "dynamic_rating", "force_unit", "segments"}
 SEGMENT_KEYS = {"radial_load", "speed_rpm", "duration_hours"}
-MAX_BYTES = 65536
 MAX_SEGMENTS = 100
 
 
@@ -19,8 +20,8 @@ def finite_number(value, label, *, minimum, maximum):
     """Reject booleans, nonfinite numbers, and physically unscoped extremes."""
     if (
         type(value) not in (int, float)
-        or not math.isfinite(value)
         or not minimum <= value <= maximum
+        or not math.isfinite(value)
     ):
         raise ValueError(
             f"invalid {label}: expected a finite number in [{minimum}, {maximum}]"
@@ -176,9 +177,7 @@ def main(argv=None):
     )
     args = parser.parse_args(argv)
     try:
-        if args.input.stat().st_size > MAX_BYTES:
-            raise ValueError("input exceeds 64 KiB")
-        report = calculate(json.loads(args.input.read_text(encoding="utf-8")))
+        report = calculate(read_config(args.input))
         encoded = json.dumps(report, indent=2, sort_keys=True, allow_nan=False) + "\n"
         args.output.parent.mkdir(parents=True, exist_ok=True)
         args.output.write_text(encoded, encoding="utf-8")

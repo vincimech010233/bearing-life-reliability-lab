@@ -9,6 +9,8 @@ from pathlib import Path
 from statistics import NormalDist
 import numpy as np
 
+from config_io import read_config
+
 FIELDS = {
     "synthetic",
     "bearing_type",
@@ -27,9 +29,9 @@ FIELDS = {
 def number(value, name, low=0, high=1e9, strict_positive=False):
     if (
         type(value) not in (int, float)
-        or not math.isfinite(value)
         or value < low
         or value > high
+        or not math.isfinite(value)
         or strict_positive
         and value <= 0
     ):
@@ -41,8 +43,11 @@ def validate(c):
     if not isinstance(c, dict) or set(c) != FIELDS or c["synthetic"] is not True:
         raise ValueError("restricted synthetic profile required")
     if (
-        c["bearing_type"] not in {"ball", "roller"}
+        type(c["bearing_type"]) is not str
+        or c["bearing_type"] not in {"ball", "roller"}
+        or type(c["force_unit"]) is not str
         or c["force_unit"] not in {"N", "kN"}
+        or type(c["speed_unit"]) is not str
         or c["speed_unit"] != "rpm"
     ):
         raise ValueError("unsupported type/units")
@@ -159,11 +164,16 @@ def plot(r, samples, out):
         title="Pure-radial sensitivity",
     )
     axes[0].grid(alpha=0.25)
-    axes[1].hist(samples, bins=40, density=True, color="#386ca0")
+    if np.min(samples) == np.max(samples):
+        axes[1].axvline(float(samples[0]), color="#386ca0", label="Constant estimate")
+    else:
+        axes[1].hist(samples, bins=40, density=True, color="#386ca0")
     axes[1].axvline(r["basic_L10_hours"], color="#a74335", label="Nominal L10")
     axes[1].set(
         xlabel="Parameter-induced L10 estimate (h)",
-        ylabel="Density (1/h)",
+        ylabel="Constant estimate"
+        if np.min(samples) == np.max(samples)
+        else "Density (1/h)",
         title="Independent lognormal input uncertainty",
     )
     axes[1].legend()
@@ -177,10 +187,7 @@ def main():
     parser.add_argument("output_dir")
     a = parser.parse_args()
     try:
-        p = Path(a.input)
-        if p.stat().st_size > 65536:
-            raise ValueError("input exceeds 64 KiB")
-        r, s = analyze(json.loads(p.read_text()))
+        r, s = analyze(read_config(a.input))
         out = Path(a.output_dir)
         out.mkdir(exist_ok=True, parents=True)
         plot(r, s, out / "bearing.png")

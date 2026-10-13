@@ -1,0 +1,40 @@
+OBSERVED 1 queries 0 advisories
+test_degenerate_extreme_samples_render (test_bearing.BearingTests.test_degenerate_extreme_samples_render) ... ok
+test_dimension_invariance (test_bearing.BearingTests.test_dimension_invariance) ... ok
+test_numerical_limits (test_bearing.BearingTests.test_numerical_limits) ... ok
+test_reference (test_bearing.BearingTests.test_reference) ... ok
+test_rejection (test_bearing.BearingTests.test_rejection) ... ok
+test_roller_reference (test_bearing.BearingTests.test_roller_reference) ... ok
+test_scaling (test_bearing.BearingTests.test_scaling) ... ok
+test_seeded_and_exact_uncertainty (test_bearing.BearingTests.test_seeded_and_exact_uncertainty) ... ok
+test_sensitivity_derivatives (test_bearing.BearingTests.test_sensitivity_derivatives) ... ok
+test_units_ratio_and_unknown_fields (test_bearing.BearingTests.test_units_ratio_and_unknown_fields) ... ok
+test_zero_uncertainty (test_bearing.BearingTests.test_zero_uncertainty) ... ok
+test_actual_read_is_bounded_without_stat (test_config_io.ConfigIOTests.test_actual_read_is_bounded_without_stat) ... ok
+test_both_clis_preserve_existing_output_on_invalid_input (test_config_io.ConfigIOTests.test_both_clis_preserve_existing_output_on_invalid_input) ... ok
+test_deep_json_has_controlled_error (test_config_io.ConfigIOTests.test_deep_json_has_controlled_error) ... ok
+test_duplicate_fields_at_any_depth (test_config_io.ConfigIOTests.test_duplicate_fields_at_any_depth) ... ok
+test_exact_size_and_utf8 (test_config_io.ConfigIOTests.test_exact_size_and_utf8) ... ok
+test_examples_decode_without_alteration (test_config_io.ConfigIOTests.test_examples_decode_without_alteration) ... ok
+test_advisory_is_failure (test_dependency_audit.DependencyAuditTests.test_advisory_is_failure) ... ok
+test_complete_clean_response (test_dependency_audit.DependencyAuditTests.test_complete_clean_response) ... ok
+test_incomplete_or_invalid_response_is_not_verified (test_dependency_audit.DependencyAuditTests.test_incomplete_or_invalid_response_is_not_verified) ... ok
+test_network_failure_and_empty_scope_fail_closed (test_dependency_audit.DependencyAuditTests.test_network_failure_and_empty_scope_fail_closed) ... ok
+test_new_output_preserves_historical_evidence (test_dependency_audit.DependencyAuditTests.test_new_output_preserves_historical_evidence) ... ok
+test_report_and_bounded_input (test_duty_cycle_cli.CLIValidationTests.test_report_and_bounded_input) ... error: input exceeds 64 KiB
+ok
+test_one_case (test_duty_cycle_model.DutyCycleTests.test_one_case) ... ok
+test_extreme_supported_single_segments_match_closed_form (test_duty_cycle_reference.DutyCycleReferenceTests.test_extreme_supported_single_segments_match_closed_form) ... ok
+test_independent_decimal_damage_reference (test_duty_cycle_reference.DutyCycleReferenceTests.test_independent_decimal_damage_reference) ... ok
+test_invalid_segment_numbers_and_schema (test_duty_cycle_reference.DutyCycleReferenceTests.test_invalid_segment_numbers_and_schema) ... ok
+test_order_split_duration_and_speed_invariants (test_duty_cycle_reference.DutyCycleReferenceTests.test_order_split_duration_and_speed_invariants) ... ok
+test_units_and_rating_load_scaling (test_duty_cycle_reference.DutyCycleReferenceTests.test_units_and_rating_load_scaling) ... ok
+test_rejects_bad_inputs (test_duty_cycle_validation.DutyCycleValidationTests.test_rejects_bad_inputs) ... ok
+test_rare_heavy_load_contribution (test_duty_cycle_variable.VariableLoadTests.test_rare_heavy_load_contribution) ... ok
+test_roller_exponent (test_duty_cycle_variable.VariableLoadTests.test_roller_exponent) ... ok
+test_speed_weighted_inverse_life (test_duty_cycle_variable.VariableLoadTests.test_speed_weighted_inverse_life) ... ok
+
+----------------------------------------------------------------------
+Ran 33 tests in 2.119s
+
+OK

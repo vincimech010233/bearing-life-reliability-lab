@@ -1,0 +1,6 @@
+{
+  "classification": "OBSERVED",
+  "reviewed_hashes_match": true,
+  "scope": "Added reviewer evidence and final docs; same conservative patterns as privacy-scan.json",
+  "flags": []
+}

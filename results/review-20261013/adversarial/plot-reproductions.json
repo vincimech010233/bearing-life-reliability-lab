@@ -1,0 +1,31 @@
+[
+  {
+    "name": "tiny_life",
+    "life_hours": 1.1111111111111115e-305,
+    "status": "success"
+  },
+  {
+    "name": "huge_life",
+    "life_hours": 1.6666666666666674e+244,
+    "status": "error",
+    "exception": "ValueError",
+    "message": "Too many bins for data range. Cannot create 40 finite-sized bins."
+  },
+  {
+    "name": "normal_zero_cv",
+    "life_hours": 1388.888888888889,
+    "status": "success"
+  },
+  {
+    "name": "tiny_speed",
+    "life_hours": 2.0833333333333336e+306,
+    "status": "error",
+    "exception": "ValueError",
+    "message": "Too many bins for data range. Cannot create 40 finite-sized bins."
+  },
+  {
+    "name": "deep_nesting_python312",
+    "returncode": 2,
+    "stderr": "error: synthetic profile with exact required fields only\n"
+  }
+]
