@@ -1,0 +1,10 @@
+{
+  "synthetic": true,
+  "bearing_type": "ball",
+  "dynamic_rating": 10,
+  "force_unit": "kN",
+  "segments": [
+    {"radial_load": 2, "speed_rpm": 1000, "duration_hours": 1},
+    {"radial_load": 4, "speed_rpm": 2000, "duration_hours": 1}
+  ]
+}
